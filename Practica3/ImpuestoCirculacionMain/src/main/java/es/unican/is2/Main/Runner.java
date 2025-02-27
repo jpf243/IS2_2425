@@ -1,6 +1,8 @@
 package es.unican.is2.Main;
 
 import es.unican.is2.Business.GestionImpuestoCirculacion;
+import es.unican.is2.DAOH2.ContribuyentesDAO;
+import es.unican.is2.DAOH2.VehiculosDAO;
 import es.unican.is2.GUI.VistaFuncionario;
 
 /**
