@@ -9,5 +9,10 @@
   		<artifactId>ImpuestoCirculacionCommon</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>es.unican.is2</groupId>
+  		<artifactId>ImpuestoCirculacionDAOH2</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>

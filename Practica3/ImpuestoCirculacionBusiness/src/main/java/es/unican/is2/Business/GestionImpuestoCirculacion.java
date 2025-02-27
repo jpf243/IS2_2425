@@ -7,9 +7,14 @@ import es.unican.is2.Common.IGestionVehiculos;
 import es.unican.is2.Common.IInfoImpuestoCirculacion;
 import es.unican.is2.Common.OperacionNoValidaException;
 import es.unican.is2.Common.Vehiculo;
+import es.unican.is2.DAOH2.ContribuyentesDAO;
+import es.unican.is2.DAOH2.VehiculosDAO;
 
 public class GestionImpuestoCirculacion implements IGestionContribuyentes, IGestionVehiculos, IInfoImpuestoCirculacion{
-
+	
+	public GestionImpuestoCirculacion (ContribuyentesDAO contribuyentesDAO, VehiculosDAO vehiculosDAO) {
+	}
+	
 	public Contribuyente altaContribuyente(Contribuyente c) throws DataAccessException {
 		// TODO Auto-generated method stub
 		return null;
