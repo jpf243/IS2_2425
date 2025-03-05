@@ -14,11 +14,20 @@ public abstract class Vehiculo {
 	private LocalDate fechaMatriculacion;
 	private TipoMotor motor;
 
-	// TODO
+	/**
+	 * Contructor de la clase
+	 * @param id id del vehiculo
+	 * @param matricula matricula del vehiculo
+	 * @param fechaMatriculacion fecha en la que se matriculo el vehiculo
+	 * @param motor motor que tiene el vehiculo
+	 */
 	public Vehiculo(long id, String matricula, LocalDate fechaMatriculacion, TipoMotor motor) {
-		// TODO
+		this.id = id;
+	    this.matricula = matricula;
+	    this.fechaMatriculacion = fechaMatriculacion;
+	    this.motor = motor;
 	}
-
+	
 	/**
 	 * Retorna la matricula del vehiculo.
 	 */
@@ -46,8 +55,9 @@ public abstract class Vehiculo {
 	public long getId() {
 		return id;
 	}
+	
 
 	// TODO
 	public abstract double precioImpuesto();
-
+	
 }

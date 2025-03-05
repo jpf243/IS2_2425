@@ -10,7 +10,7 @@ public class Turismo extends Vehiculo {
 	
 	public Turismo(long id, String matricula, LocalDate fechaMatriculacion, TipoMotor motor, double potencia) {
 		super(id, matricula, fechaMatriculacion, motor);
-		//TODO
+		this.potencia = potencia;
 	}
 
 	/**
@@ -22,8 +22,25 @@ public class Turismo extends Vehiculo {
 
 	@Override
 	public double precioImpuesto() {
-		//TODO
-		return 0;
-	}
+		double tarifa;
+        if (potencia < 8) {
+            tarifa = 25;
+        } else if (potencia < 12) {
+            tarifa = 50;
+        } else if (potencia < 16) {
+            tarifa = 100;
+        } else if (potencia < 20) {
+            tarifa = 120;
+        } else {
+            tarifa = 200;
+        }
+        
+        int antiguedad = LocalDate.now().getYear() - getFechaMatriculacion().getYear();
+        if (antiguedad > 25) {
+            return 0;
+        }
+        
+        return tarifa * (1 - getMotor().getDescuentoImpuesto());
+    }
 
 }

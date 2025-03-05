@@ -11,7 +11,7 @@ public class Motocicleta extends Vehiculo {
 
 	public Motocicleta(long id, String matricula, LocalDate fechaMatriculacion, TipoMotor motor, int cilindrada) {
 		super(id, matricula, fechaMatriculacion, motor);
-		//TODO
+		this.cilindrada = cilindrada;
 	}
 
 	/**
@@ -23,8 +23,25 @@ public class Motocicleta extends Vehiculo {
 
 	@Override
 	public double precioImpuesto() {
-		//TODO
-		return 0;
+		double tarifa;
+        if (cilindrada <= 125) {
+            tarifa = 15;
+        } else if (cilindrada <= 250) {
+            tarifa = 30;
+        } else if (cilindrada <= 500) {
+            tarifa = 60;
+        } else if (cilindrada <= 1000) {
+            tarifa = 100;
+        } else {
+            tarifa = 120;
+        }
+
+        int antiguedad = LocalDate.now().getYear() - getFechaMatriculacion().getYear();
+        if (antiguedad > 25) {
+            return 0;
+        }
+
+        return tarifa * (1 - getMotor().getDescuentoImpuesto());
 	}
 
 }
