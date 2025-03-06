@@ -25,13 +25,13 @@ public class Motocicleta extends Vehiculo {
 	public double precioImpuesto() {
 		double tarifa;
         if (cilindrada <= 125) {
-            tarifa = 15;
+            tarifa = 8;
         } else if (cilindrada <= 250) {
-            tarifa = 30;
+            tarifa = 15;
         } else if (cilindrada <= 500) {
-            tarifa = 60;
+            tarifa = 30;
         } else if (cilindrada <= 1000) {
-            tarifa = 100;
+            tarifa = 60;
         } else {
             tarifa = 120;
         }

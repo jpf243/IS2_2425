@@ -26,13 +26,13 @@ public class Turismo extends Vehiculo {
         if (potencia < 8) {
             tarifa = 25;
         } else if (potencia < 12) {
-            tarifa = 50;
+            tarifa = 67;
         } else if (potencia < 16) {
-            tarifa = 100;
+            tarifa = 143;
         } else if (potencia < 20) {
-            tarifa = 120;
+            tarifa = 178;
         } else {
-            tarifa = 200;
+            tarifa = 223;
         }
         
         int antiguedad = LocalDate.now().getYear() - getFechaMatriculacion().getYear();
