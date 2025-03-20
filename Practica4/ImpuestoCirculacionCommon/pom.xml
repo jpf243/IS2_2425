@@ -3,5 +3,13 @@
   <groupId>es.unican.is2</groupId>
   <artifactId>ImpuestoCirculacionCommon</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+	<dependency>
+		<groupId>org.junit.jupiter</groupId>
+		<artifactId>junit-jupiter</artifactId>
+		<version>5.12.0</version>
+		<scope>test</scope>
+	</dependency>  
+  </dependencies>
 </project>
 

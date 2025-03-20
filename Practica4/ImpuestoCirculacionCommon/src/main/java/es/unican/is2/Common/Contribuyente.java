@@ -29,7 +29,6 @@ public class Contribuyente {
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
         this.dni = dni;
-        this.vehiculos = new LinkedList<>();
 	}
     
     /**
