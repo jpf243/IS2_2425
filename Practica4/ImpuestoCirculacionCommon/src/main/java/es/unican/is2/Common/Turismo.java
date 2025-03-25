@@ -59,11 +59,14 @@ public class Turismo extends Vehiculo {
         // Aplicar descuentos o exenciones
         if (añosVehiculo >= 25) {
             return 0;
-        } else if (super.getMotor() == TipoMotor.ELECTRICO) {
+        } 
+        if (super.getMotor() == TipoMotor.ELECTRICO) {
             return precio * 0.25; // 75% de descuento
-        } else if (super.getMotor() == TipoMotor.HIBRIDO && añosVehiculo <= 4) {
+        }
+        if (super.getMotor() == TipoMotor.HIBRIDO && añosVehiculo <= 4) {
             return precio * 0.25; // 75% de descuento
-        } else if (super.getMotor() == TipoMotor.GAS && añosVehiculo <= 1) {
+        }
+        if (super.getMotor() == TipoMotor.GAS && añosVehiculo <= 1) {
             return precio * 0.5; // 50% de descuento
         }
 
