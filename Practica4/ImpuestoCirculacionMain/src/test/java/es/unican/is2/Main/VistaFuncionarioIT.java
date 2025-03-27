@@ -1,3 +1,5 @@
+package es.unican.is2.Main;
+
 import static org.assertj.swing.launcher.ApplicationLauncher.application;
 import static org.assertj.swing.finder.WindowFinder.findFrame;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -79,3 +81,4 @@ class VistaFuncionarioIT {
         assertThat(window.textBox("txtNombreContribuyente").text()).isEqualTo("Error BBDD");
     }
 }
+
