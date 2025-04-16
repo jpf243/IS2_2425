@@ -7,18 +7,25 @@ public class CuentaValores extends Cuenta {
 
 	private List<Valor> valores;
 	
+	// WMC = 1
+	// CCOG = 0
 	public CuentaValores(String numCuenta) {
 		super(numCuenta);
 		valores = new LinkedList<Valor>();
 	}
 	
+	// WMC = 1
+	// CCOG = 0
 	public List<Valor> getValores() {
 		return valores;
 	}
 	
+	// WMC = 3
+	// CCOG = 3
+	// CBO + 1
 	public boolean anhadeValor(Valor valor) {
-		for (Valor v:valores) {
-			if (v.getEntidad().equals(valor.getEntidad()))
+		for (Valor v:valores) { // CCOG +1 - WMC +1
+			if (v.getEntidad().equals(valor.getEntidad())) // CCOG +2 - WMC +1
 				return false;
 		}
 		valores.add(valor);

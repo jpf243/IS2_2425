@@ -4,8 +4,11 @@ public abstract class Tarjeta {
 	
 	protected String numero, titular, cvc;		
 	protected CuentaAhorro cuentaAsociada;
-
+	
+	// WMC = 1
+	// CCOG = 0
 	public Tarjeta(String numero, String titular, String cvc,
+			// CBO +1
 			CuentaAhorro cuentaAsociada) {
 		this.numero = numero;
 		this.titular = titular;
@@ -19,6 +22,8 @@ public abstract class Tarjeta {
 	 * @throws saldoInsuficienteException
 	 * @throws datoErroneoException
 	 */
+	// WMC = 1
+	// CCOG = 0
 	public abstract void retirar(double x) throws saldoInsuficienteException, datoErroneoException;
 
 	/**
@@ -28,7 +33,10 @@ public abstract class Tarjeta {
 	 * @throws saldoInsuficienteException
 	 * @throws datoErroneoException
 	 */
+	// WMC = 1
+	// CCOG = 0
 	public abstract void pagoEnEstablecimiento(String datos, double x)
+			// CBO +2
 			throws saldoInsuficienteException, datoErroneoException;
 	
 }
