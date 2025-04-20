@@ -34,5 +34,9 @@ public abstract class Tarjeta {
 	public abstract void pagoEnEstablecimiento(String datos, double x)
 			// CBO +2
 			throws saldoInsuficienteException, datoErroneoException;
+	/**
+	 * Actualiza la caducidad de las trajetas
+	 */
+	public abstract void actualizarCaducidad();
 	
 }
